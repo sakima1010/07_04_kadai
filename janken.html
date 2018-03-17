@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>後出しじゃんけん</title>
+</head>
+  <body>
+    <p>じゃんけん・・・</p>
+    <button id="start"><label>スタート</label></button>
+    <p class="myhand"></p>
+
+  <div class="choice">
+    <button id="gu" value="1"><label>グー</label></button>
+    <button id="choki" value="2"><label>チョキ</label></button>
+    <button id="pa" value="3"><label>パー</label></button>
+    <br>
+    </div>
+
+  <p class="result"></p>
+
+<!-- jQueryの読み込み -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- jsファイルと連携 -->
+<script src="janken.js"></script>
+<!-- プラグインLityの導入 参考：http://phiary.me/jquery-plugin-lity/-->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.css' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.js'></script>
+  </body>
+</html>
