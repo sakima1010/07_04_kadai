@@ -1,8 +1,8 @@
 $(function() {
-// 0～3の乱数を変数myhandに格納
+  // 0～3の乱数を変数myhandに格納
   var myhand = Math.floor( Math.random() * 3 + 1);
 
-// 乱数に応じて自分の出す手を決定
+  // 乱数に応じて自分の出す手を決定
   if (myhand == 1) {
     var mess = "わたしはグーを出したよ<br><img src='images/guu.png'>";
  }else if (myhand == 2){
@@ -14,17 +14,61 @@ $(function() {
 // 自分の出した手を表示
  $(".myhand").html(mess);
  return myhand;
- });
+});
+
+$(function() {
+  // プレイヤーの手の取得
+  var yourhand = $("[name=yourhand]:checked").val();
+  // var yourhand = $('yourhand').attr('value');
+  // 結果を判定
+  if (myhand == yourhand) {
+    var mess2 = "あいこです";
+ };
+  // 結果を表示
+   $(".result").html(mess2);
+});
 
  $(document).ready(function(){
    $('.choice').hide();
    $('.myhand').hide();
  });
+
  $(document).ready(function(){
    $('#start').on('click', function(){
-   $('.choice').show(1000);
-   $('.myhand').show(1000);
- });
+     $('.choice').show(1000);
+     $('.myhand').show(1000);
+   });
+   $('#pon').on('click', function(){
+     $(".result").show(1000);
+
+       // $('.result').html("あいこ");
+     // }else if(myhand == 2){
+     //   $('.result').html("あなたのまけ");
+     // }else{
+     //   $('.result').html("あなたのかち");
+   });
+   });
+
+
+
+
+//   $(document).ready(function(){
+   // $('#gu').on('click', function(){
+//      if(myhand == 1){
+//        $(".result").html("あいこ");
+//      }else{
+//        $(".result").html("そのた");
+//      };
+//      console_log();
+//  });
+// });
+    // if(myhand == 1){
+    //   $('#gu').on('click',function(){
+    //     $(".result").html("あいこ");
+    //   }else{
+    //     $(".result").html("そのた");
+    //   };
+    // )};
 
 
 
@@ -44,8 +88,6 @@ $(function() {
  //    $(".result").html(mess2);
  //   }
  // }
-
-});
 //
 // $('#gu').on('click',function(){
 //   if()$('#ex').show(2000);

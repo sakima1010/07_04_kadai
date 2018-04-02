@@ -12,11 +12,14 @@
     <p class="myhand"></p>
 
   <div class="choice">
-    <button id="gu" value="1"><label>グー</label></button>
-    <button id="choki" value="2"><label>チョキ</label></button>
-    <button id="pa" value="3"><label>パー</label></button>
-    <br>
-    </div>
+    <form action="post">
+      <input type="radio" name="yourhand" value="1">グー
+      <input type="radio" name="yourhand" value="2">チョキ
+      <input type="radio" name="yourhand" value="3">パー
+      <br>
+      <button id="pon"><label>ぽん</label></button>
+    </form>
+  </div>
 
   <p class="result"></p>
 
